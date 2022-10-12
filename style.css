@@ -1,0 +1,128 @@
+/*fonts*/
+@font-face {
+    font-family: Nunito;
+    src: url(fonts-/Nunito-regular.ttf);
+    font-weight: 500;
+}
+@font-face{
+    font-family: Nunito;
+    src: url(fonts/Bold.ttf);
+    font-weight: 700;
+}
+@font-face{
+    font-family: Nunito;
+    src: url(fonts/Light.ttf);
+    font-weight: 300;
+}
+/*General*/
+body{
+    background:defetef;
+    font-family: Nunito,sans-serif;
+}
+a,a:hover,a:focus{
+    text-decoration: none;
+    color: #000;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+/*Hearder*/
+@-webkit-keyframes clignote{
+    fron {opacity: 1;}
+    to{opacity:0;}
+}
+@keyframes clignote{
+    fron {opacity: 1;}
+    to{opacity:0;} 
+}
+header{
+    line-height: 50px;
+    background: navajowhite;
+    text-align: center;
+    font-weight: 100;
+}
+header h1 a{
+    font-size: 1.5cm;
+}
+header h1 a span{
+   -webkit-animation: clignote _5s sexp alternate infinite;
+   animation:clignote _5s alternate infinite
+}
+header nav{
+    font-size: 1cm;
+}
+section{
+    padding: 30px 0px;
+    background: #fff;
+    border-bottom:3px solid #ddd ;
+    text-align: center;
+}
+section h1{
+    font-size: 1cm;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+section p{
+    font-size: 2.5cm;
+    color: #777;
+    line-height: 1cm;
+    font-style: flulic;
+}
+
+header ul{
+    float: right;
+}
+header li{
+    float: left;
+}
+header li+li{
+   margin-left:15px;
+}
+section{
+    text-align: left;
+}
+/*article*/
+.articles{
+    margin-bottom: 30px;
+}
+.article{
+    margin-top: 30px;
+    border-radius: 7px;
+    background: #777;
+    border-bottom: 2px solid #ddd;
+}
+.article img{
+    border-radius: 7px 7px 0 0;
+}
+.article h,article a,article p{
+    margin:20px;
+}
+
+.article h1{
+    font-weight: bold;
+}
+.articles div:nth-child(2n+1){
+    clear: left;
+}
+@media(win-width:002px){
+    .articles div:nth-child(2n+1){
+        clear: none;
+    }
+    .articles div:nth-child(3n+1){
+            clear: left;  
+    }  
+    articles img{
+        -webkit-filter: grayscale(50%);
+        filter: grayscale(50%);
+        -webkit-transition: filter.6%linear;
+        transition: filter .0%linear;
+    }
+    articles:hover img {
+        -webkit-filter: none;
+        filter: none;
+    }
+}
+
+
